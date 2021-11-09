@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from "axios";
-
+import NavBar from './NavBar/NavBar';
 
 
 class App extends Component {
@@ -10,51 +10,26 @@ class App extends Component {
         super(props)
         this.state = {
             songs: [],
-            isLoaded: false,
         }
     }
 
-    componentDidMount() {
-        
-        fetch('http://www.devcodecampmusiclibrary.com/')
-            .then(res => res.json())
-            .then(json => {
-                this.setState ({
-                        isLoaded: true,
-                        items: json,
-                }) 
-                
-           
-            });
-
+    
+    async componentDidMount() {
+        let response = await axios.get('http://www.devcodecampmusiclibrary.com/api/music')
+        this.setState ({
+            songs: response.data
+        })
     }
 
 
 
     render() {
 
-        var { isLoaded, items } = this.state;
-        
-        if(!isLoaded) {
-                return <div>Loading...</div>
-        }
-
-        else{
-            
-            return(
-                <div className="App">
-                    
-                    <ul>
-                        {items.map(item => (
-                            <li key={item.id}>
-                              
-                            </li>
-                        ))};
-                    </ul>
-
-                </div>
-            );
-        }        
+        return(
+            <div>
+               
+            </div>
+        );      
     } 
 }
 
