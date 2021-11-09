@@ -8,7 +8,7 @@ function NavBar(props) {
 
 
 
-    render() {
+    
 
         return(
             <div>
@@ -17,7 +17,7 @@ function NavBar(props) {
                </ul>
             </div>
         );      
-    } 
+     
 }
 
 

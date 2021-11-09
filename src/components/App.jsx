@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './App.css';
 import axios from "axios";
 import NavBar from './NavBar/NavBar';
+import SongTable from './SongTable/SongTable';
+import SearchBar from './SearchBar/SearchBar';
 
 
 class App extends Component {

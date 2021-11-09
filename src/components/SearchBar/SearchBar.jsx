@@ -2,6 +2,7 @@ import React from 'react';
 import './SearchBar.css'
 
 
+function SearchBar(props) {
 
 
 
@@ -9,7 +10,6 @@ import './SearchBar.css'
 
 
 
-render() {
 
     return(
         <div>
@@ -18,6 +18,5 @@ render() {
            </ul>
         </div>
     );      
-} 
-
+}
 export default SearchBar;
