@@ -1,17 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './SongTable.css'
+
+
+
 
 function SongTable(props) {
 
     
-            return(
-                <div>
-                    <ul>
-                        {props.music.map((song, index)=>
-                            <li className= 'Font' key= {index}>{song.title} by {song.artist}</li>
-                        )}
-                    </ul>
-                </div>
-           );      
+    return(
+        <div>
+            <ul>
+               
+            </ul>
+        </div>
+    );      
      
 
 }

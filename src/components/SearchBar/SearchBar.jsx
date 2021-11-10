@@ -6,17 +6,15 @@ function SearchBar(props) {
 
 
 
-
-
-
-
-
-    return(
+    return (
         <div>
-           <ul>
-               
-           </ul>
+            <ul>
+                
+            </ul>
         </div>
-    );      
+    );
+    
 }
+
+
 export default SearchBar;

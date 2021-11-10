@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from "axios";
-import NavBar from './NavBar/NavBar';
 import SongTable from './SongTable/SongTable';
-import SearchBar from './SearchBar/SearchBar';
+import NavBar from './NavBar/NavBar';
+
 
 
 class App extends Component {
@@ -28,9 +28,11 @@ class App extends Component {
     render() {
 
         return(
-            <div>
+            <div className="container-fluid">
+               <SongTable/>
+               <NavBar/>
                
-            </div>
+           </div>
         );      
     } 
 }

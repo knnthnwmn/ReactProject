@@ -1,22 +1,14 @@
 import React from 'react';
 import './NavBar.css'
 
-function NavBar(props) {
 
 
-
-
-
-
-    
-
-        return(
-            <div>
-               <ul>
-                   
-               </ul>
-            </div>
-        );      
+const NavBar = (props) => {
+    return (
+        <div className="bar">
+                
+        </div>
+    );
      
 }
 
