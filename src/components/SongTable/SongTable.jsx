@@ -4,17 +4,22 @@ import './SongTable.css'
 
 
 
-function SongTable(props) {
-
+function SongTable(props){
     
-    return(
-        <div>
-            <ul>
-               
-            </ul>
-        </div>
-    );      
-     
+    
+    
+    
+    return (
+       
+        <ul>
+           <h1>Songs List</h1>
+            {props.songs.map((song,index) =>
+           <li className= "fontcolor"  key= {index}> {song.title} by {song.artist}</li> )}     
+        
+        </ul>   
+
+
+    );
 
 }
 

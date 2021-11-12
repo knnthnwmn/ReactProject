@@ -3,6 +3,7 @@ import './App.css';
 import axios from "axios";
 import SongTable from './SongTable/SongTable';
 import NavBar from './NavBar/NavBar';
+import TitleBar from './TitleBar/Titlebar';
 
 
 
@@ -17,7 +18,7 @@ class App extends Component {
 
     
     async componentDidMount() {
-        let response = await axios.get('http://www.devcodecampmusiclibrary.com/api/music')
+        let response = await axios.get('http://localhost:8000/api/songs')
         this.setState ({
             songs: response.data
         })
@@ -29,7 +30,7 @@ class App extends Component {
 
         return(
             <div className="container-fluid">
-               <SongTable/>
+               <SongTable songs={this.state.songs}/>
                <NavBar/>
                
            </div>

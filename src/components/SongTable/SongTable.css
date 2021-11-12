@@ -1,3 +1,15 @@
-.font {
-    color: rgb(91, 58, 122);
+h1{
+    text-align: left;
+    color: white;
+    text-shadow: 4px 4px 10px #fff6bf;
+    font-variant: small-caps;
+}
+
+
+
+.fontcolor{
+    text-align: left;
+    color:wheat;
+    text-shadow: 4px 4px 10px #fff6bf;
+    font-variant: small-caps;
 }

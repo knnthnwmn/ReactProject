@@ -3,14 +3,17 @@ import './NavBar.css'
 
 
 
-const NavBar = (props) => {
+function NavBar(props) {
+    
     return (
-        <div className="bar">
-                
+        <div>
+            
         </div>
+       
     );
-     
+
 }
+
 
 
 
