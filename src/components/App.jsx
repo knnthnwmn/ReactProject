@@ -3,7 +3,8 @@ import './App.css';
 import axios from "axios";
 import SongTable from './SongTable/SongTable';
 import NavBar from './NavBar/NavBar';
-import TitleBar from './TitleBar/Titlebar';
+import TitleBar from './TitleBar/TitleBar';
+import SearchBar from './SearchBar/SearchBar';
 
 
 
@@ -30,8 +31,11 @@ class App extends Component {
 
         return(
             <div className="container-fluid">
+               <TitleBar/>
+               <SearchBar filterSongs={this.filterSongs}/> 
                <SongTable songs={this.state.songs}/>
                <NavBar/>
+               
                
            </div>
         );      
