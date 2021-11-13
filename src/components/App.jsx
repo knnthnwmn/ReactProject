@@ -5,6 +5,7 @@ import SongTable from './SongTable/SongTable';
 import NavBar from './NavBar/NavBar';
 import TitleBar from './TitleBar/TitleBar';
 import SearchBar from './SearchBar/SearchBar';
+import CreateSong from './CreateSong/CreateSong';
 
 
 
@@ -34,7 +35,13 @@ class App extends Component {
         )
     }
 
-  
+    createSong = (newSong) => {
+        console.log('From createSong on App component', newSong);
+        this.songs.push(newSong);
+        this.setState({
+            music: this.music.lenth -1 
+        });
+    }
 
 
 
@@ -44,9 +51,11 @@ class App extends Component {
         return(
             <div className="container-fluid">
                <TitleBar/>
-               <SearchBar userInput= {this.state.userInput} changeHandler={this.changeHandler}/> 
+               <SearchBar userInput= {this.state.userInput} changeHandler={this.changeHandler}/>
+               <CreateSong createSong={this.createSong}/>
                <SongTable songs={this.state.songs} userInput= {this.state.userInput}/>
                <NavBar/>
+
                
                
            </div>
