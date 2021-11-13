@@ -1,16 +1,11 @@
 
-h2{
+h1 {
+    
+    padding-bottom: 0.2 em;
+    padding-left: 1 em;
     text-align: center;
-    color: white;
+        color: white;
     text-shadow: 4px 4px 10px #fff6bf;
     font-variant: small-caps;
 }
 
-
-
-.fontcolor{
-    text-align: left;
-    color:wheat;
-    text-shadow: 4px 4px 10px #fff6bf;
-    font-variant: small-caps;
-}

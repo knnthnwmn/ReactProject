@@ -12,7 +12,9 @@ class App extends Component {
 
     constructor(props) {
         super(props)
+        this.changeHandler= this.changeHandler.bind(this)
         this.state = {
+        userInput: "",
             songs: [],
         }
     }
@@ -20,10 +22,20 @@ class App extends Component {
     
     async componentDidMount() {
         let response = await axios.get('http://localhost:8000/api/songs')
-        this.setState ({
+        this.setState({
             songs: response.data
         })
     }
+
+    changeHandler(event) {
+        console.log(event)
+        this.setState(
+            {userInput: event.target.value}
+        )
+    }
+
+  
+
 
 
 
@@ -32,8 +44,8 @@ class App extends Component {
         return(
             <div className="container-fluid">
                <TitleBar/>
-               <SearchBar filterSongs={this.filterSongs}/> 
-               <SongTable songs={this.state.songs}/>
+               <SearchBar userInput= {this.state.userInput} changeHandler={this.changeHandler}/> 
+               <SongTable songs={this.state.songs} userInput= {this.state.userInput}/>
                <NavBar/>
                
                
